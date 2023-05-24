@@ -72,5 +72,11 @@ def get_recommendation():
     return jsonify(recommendations)
 
 
+@app.route('/=', methods=['GET'])
+def home():
+    return "hello there"
+
+
+
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
